@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Quiero de Comer Logística</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../node_modules/excellentexport/dist/excellentexport.js"></script>
+    <script src="../src/js/reportepedidos.js"></script>
+    <script src="../src/js/helpers/utils.js"></script>
+    
+    <link rel="stylesheet" href="../src/css/logistica.css">
+    <link rel="stylesheet" href="../src/css/reportepedidos.css">
+    <link rel="stylesheet" href="../src/plugins/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../src/css/comentarios/comentarios.css">
+    <link rel="stylesheet" href="..//node_modules/rm-emoji-picker/dist/emojipicker.css">
+    <link rel="stylesheet" href="..//node_modules/animate.css/animate.min.css">
+    <link rel="import" href="../src/modals/detallecliente.html">
+
+</head>
+
+<body id="bodyLogistica" class="animated fadeIn">
+    <div class="navbar navbar-static-top navbar-light bg-light" style="height:5%" role="navigation">
+        <div class="col-md-12 text-left navbar-right">
+            <button id="logout-button" class="btn btn-sm" style="float:right;color:rgb(73, 73, 73)"><b><i
+                        class="fas fa-sign-out-alt" style="color:rgb(73, 73, 73)"></i>&nbsp;&nbsp;Cerrar
+                    Sesión</b></button>
+        </div>
+    </div>
+    <div class="user_card_logistica row wrapper m-3 border-bottom white-bg page-heading">
+
+        <div class="dropdown m-2 id="dropdown-menu" >
+            <button class="btn btn-success" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+               style="height:40px;width:40px" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bars id="dropdown-icon"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="../src/logistica.html">
+                    <i class="fas fa-home"></i>&nbsp; Inicio</a>
+                <a class="dropdown-item" href="../src/reportepedidos.html">
+                    <i class="fas fa-chart-pie"></i>&nbsp; Reporte Pedidos</a>
+            </div>
+        </div>
+        <div class="col-md-8 m-1">
+            <h2 id="" class="ibox-title ml-2">
+                Reporte de Pedidos
+            </h2>
+        </div>
+        <div class="col-md-2 m-2 ml-auto float-left">
+            <a download="reporte.xls" class="btn btn-success" style="width:35pt;float:right" id="excel-button"
+                onclick="return ExcellentExport.excel(this, 'listado-reporte', 'Reporte de Pedidos');"
+                name="restaurante-estatus" value="">
+                <i style="color:white" class="fas fa-file-excel fa-lg"></i>
+            </a>
+        </div>
+    </div>
+    <div class="user_card_logistica row wrapper m-3 border-bottom white-bg page-heading animated fadeIn">
+        <div class="col-md-12">
+            <div class="table-responsive table-wrapper-scroll-y-listado scroll_text-listado fadeInRightBig">
+                <input id="notificacion-sound" value="../src/content/sound/notificacion.mp3" type="hidden" />
+                <table class="table" id="listado-reporte">
+                    <thead>
+                        <tr>
+                            <th>
+                                FECHA REGISTRO
+                            </th>
+                            <th>
+                                NOMBRE COMENSAL
+                            </th>
+                            <th>
+                                FOLIO
+                            </th>
+                            <th class="text-center">
+                                TIPO PAGO
+                            </th>
+                            <th class="text-right">
+                                TOTAL
+                            </th>
+                            <th class="text-right">
+                                BANCO
+                            </th>
+                            <th class="text-right">
+                                QDC
+                            </th>
+                            <th class="text-right">
+                                COSTO ENVIO
+                            </th>
+                            <th class="text-right">
+                                INGRESO
+                            </th>
+
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                    <div class="row">
+                        <div id="spinner-load">
+
+                        </div>
+                    </div>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        'use strict'
+        window.$ = window.jQuery = require('jquery')
+        window.Tether = require('tether')
+        window.Bootstrap = require('bootstrap')
+    </script>
+
+</body>
+
+
+</html>
