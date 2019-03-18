@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../src/plugins/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="..//node_modules/animate.css/animate.min.css">
+    <link rel="stylesheet" href="../src/css/login.css">
+    <noscript>
+        <style>
+            body {
+                    opacity: 1;
+                }
+            </style>
+    </noscript>
+    <title>Quiero de Comer Logística</title>
+</head>
+
+<body class="gray-bg">
+
+    <div class="container h-100">
+        <div class="d-flex justify-content-center h-100">
+
+            <div class="user_card animated fadeIn">
+                <div class="d-flex justify-content-center">
+                    <div class="brand_logo_container">
+                        <img src="../src/Images/logo.png" class="brand_logo" alt="Logo">
+                    </div>
+                </div>
+                <form>
+                    <div class="justify-content-center form_container ml-5 mr-5">
+                        <div class="row">
+                            <div id="spinner-load"></div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input id="username" type="text" name="" class="form-control input_user" value=""
+                                data-parsley-required="true" placeholder="Usuario">
+                        </div>
+                        <div class="input-group mb-2">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                            </div>
+                            <input required id="password" type="password" name="" class="form-control input_pass" value=""
+                                placeholder="Contraseña" />
+                        </div>
+                        <div class="form-group d-flex justify-content-center">
+                            <div class="custom-control custom-checkbox">
+                                <!-- <input required type="checkbox" class="custom-control-input" id="customControlInline">
+                                <label class="custom-control-label " for="customControlInline">¿Recuérdame?</label> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center mt-3 login_container">
+                        <button style="font-weight: 500;" type="button" id="login-button" name="button" class="btn login_btn">Iniciar sesión</button>
+                    </div>
+                </form>
+                <div class="mt-4">
+                    <div class="d-flex justify-content-center links">
+                        <!-- <a href="#">Recuperar contraseña</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        'use strict'
+        window.$ = window.jQuery = require('jquery')
+        window.Tether = require('tether')
+        window.Bootstrap = require('bootstrap')
+    </script>
+    <script src="index.js"></script>
+</body>
+<!-- MODAL -->
+
+<div class="modal fade" id="error-modal" tabindex="-1" role="dialog" aria-labelledby="error-modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content modal-qdc">
+            <div class="modal-header">
+                <h5 class="modal-title" id="error-modal-title">Iniciar Sesión</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <label id="texto-modal"> Las credenciales no son válidas</label>
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn btn-close">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <body>
+    <div class="jumbotron">
+        <h1 class="display-3">Jumbo heading</h1>
+        <p class="lead">Jumbo helper text</p>
+        <hr class="my-2">
+        <p>More info</p>
+        <p class="lead">
+            <button id="button-one" class="btn btn-primary btn-lg" role="button">Jumbo action name</button>
+        </p>
+    </div>
+
+</body> -->
+
+</html>
