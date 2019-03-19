@@ -691,8 +691,8 @@ async function LlamarObtenerPedidosReporte() {
     const res = await got.post(QDCApiConfig.ObtenerPedidos, { headers: { 'Authorization': credenciales }, json: true });
     var isSuccessful = isSuccessfulResponse(res.body);
     if (isSuccessful) {
-        
-    } else { 
+
+    } else {
 
     }
 }
@@ -713,4 +713,7 @@ function HideModalSpinner() {
 
     var spinner = $("#spinner-load-modal");
     spinner.removeClass('loader-modal');
+}
+function ToDelete() {
+    console.log("todelete");
 }
