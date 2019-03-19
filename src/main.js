@@ -1,16 +1,12 @@
 import { app, BrowserWindow } from 'electron';
 const { ipcMain, dialog } = require('electron');
-<<<<<<< HEAD
 //AUTO UPDATE
 
 require('update-electron-app')({
   repo: 'danielgmontgr/qdclogistica',
-  updateInterval: '1 hour',
-  logger: require('electron-log')
+  updateInterval: '1 hour'
 })
 
-=======
->>>>>>> master
 var AutoLaunch = require('auto-launch');
 var path = require('path')
 
