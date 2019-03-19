@@ -3,8 +3,7 @@ const { ipcMain, dialog } = require('electron');
 //AUTO UPDATE
 
 require('update-electron-app')({
-  repo: 'danielgmontgr/qdclogistica',
-  updateInterval: '1 hour'
+  repo: 'danielgmontgr/qdclogistica'
 })
 
 var AutoLaunch = require('auto-launch');
