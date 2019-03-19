@@ -1,5 +1,6 @@
 import { app, BrowserWindow } from 'electron';
 const { ipcMain, dialog } = require('electron');
+<<<<<<< HEAD
 //AUTO UPDATE
 
 require('update-electron-app')({
@@ -8,6 +9,8 @@ require('update-electron-app')({
   logger: require('electron-log')
 })
 
+=======
+>>>>>>> master
 var AutoLaunch = require('auto-launch');
 var path = require('path')
 
